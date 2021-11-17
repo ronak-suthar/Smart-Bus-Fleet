@@ -42,7 +42,6 @@ data = {
         "Longitude": 0,
 }
 
-
 #RFID Card Config
 reader = SimpleMFRC522()
 
@@ -99,6 +98,7 @@ try:
             db.child("Passanger Count").set({'Count':passangerDetected})
         else:
             print("PIR Input : Object Not Detected")
+            
 except KeyboardInterrupt:
     GPIO.cleanup()
     sys.exit(0)

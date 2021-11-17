@@ -5,11 +5,9 @@ import { onAuthStateChanged } from '@firebase/auth';
 import { Link, useNavigate } from "react-router-dom"
 
 export default function NavbarPage() {
-    const {auth ,logout,currentUser} = useAuth()
     const [loggedIn, setloggedIn] = useState(false)
-    const [error, setError] = useState("")
     const navigate = useNavigate()
-
+    const {auth ,logout,currentUser} = useAuth()
     console.log('Login Status', loggedIn)
 
     useEffect(() => {
@@ -28,13 +26,12 @@ export default function NavbarPage() {
     }, [])
 
     async function handleLogout() {
-        setError("")
         try {
           await logout()
           navigate("/login")
           setloggedIn(false)
         } catch {
-          setError("Failed to log out")
+          console.log("Failed to log out")
         }
     }
 
@@ -60,9 +57,10 @@ export default function NavbarPage() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home 01</Nav.Link>
-                            <Nav.Link href="#link">Feature 01</Nav.Link>
-                            <Nav.Link href="#link">Feature 02</Nav.Link>
+                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="#link">Manager</Nav.Link>
+                            <Nav.Link href="#link">Passanger</Nav.Link>
+                            <Nav.Link href="#link">Driver</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                     <Navbar.Collapse className="me-auto justify-content-end">
@@ -73,7 +71,7 @@ export default function NavbarPage() {
                         <Link to="/login">Login</Link>
                         } */}
                         {
-                            loggedIn == true ? logoutBtn() : loginBtn()
+                            loggedIn === true ? logoutBtn() : loginBtn()
                         }
 
                     </Navbar.Collapse>

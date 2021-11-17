@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getDatabase } from "firebase/database";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -17,7 +18,8 @@ const firebaseConfig = {
   storageBucket: "smart-bus-fleet.appspot.com",
   messagingSenderId: "292217918631",
   appId: "1:292217918631:web:a36d9f9377fc48e6d8f782",
-  measurementId: "G-CW65GNRCGK"
+  measurementId: "G-CW65GNRCGK",
+  databaseURL:"https://smart-bus-fleet-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
 // Initialize Firebase
@@ -26,4 +28,4 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth();
 export const db = getFirestore();
-
+export const database = getDatabase();

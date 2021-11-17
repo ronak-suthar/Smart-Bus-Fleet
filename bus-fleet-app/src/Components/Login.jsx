@@ -21,7 +21,7 @@ export default function Login() {
             setError("")
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            navigate('/profile')
+            navigate('/passanger')
         } catch {
             setError("Failed to Login")
             console.log('falied to login')

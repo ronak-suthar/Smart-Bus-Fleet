@@ -4,3 +4,48 @@
   width: 100%;
   font-size: 20px;
 }
+.search-bar{
+  margin : 2rem;
+}
+.marker {
+  /* background-image: url('https://i.imgur.com/oz3r3Wq.png'); */
+  background-image: url('https://cdn3.iconfinder.com/data/icons/transport-29/100/14-512.png');
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  background-color: yellow;
+  border-radius: 11px;
+  border: solid 3px darkslategray;
+}
+.map {
+  height: 100%;
+  width: 100%;
+}
+.app {
+  height: 55vh;
+  width: 100vw;
+}
+
+.marker {
+  background-image: url('https://cdn5.vectorstock.com/i/1000x1000/05/44/map-marker-icon-vector-12860544.jpg');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  border-radius: 11px;
+  border: solid 3px darkslategray;
+}
+
+.marker-delivery {
+  background-image: url('https://i.imgur.com/cIooqnp.png');
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  border-radius: 15px;
+  border: solid darkslategrey 3px;
+}
+.appBody{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}

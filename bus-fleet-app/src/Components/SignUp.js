@@ -43,7 +43,13 @@ export default function SignUp() {
             setError("")
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value,nameRef.current.value,userCategory)
-            navigate('/profile')
+            if(userCategory=='Passanger'){
+                navigate('/profile')
+            }
+            else if(userCategory=='Driver'){
+                navigate('/driver')
+            }
+            
         } catch {
             setError("Failed to create an account")
         }

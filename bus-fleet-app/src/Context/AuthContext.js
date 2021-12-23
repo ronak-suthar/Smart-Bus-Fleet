@@ -37,7 +37,8 @@ export function AuthProvider({ children }) {
       });
   }
 
-  async function addUserToDb(user, name, category) {
+  async function addUserToDb(user, name, category){
+    console.log('Database Addition called')
     const usersRef = collection(db, "Users");
     await setDoc(doc(usersRef, user.email), {
       userName: name,
@@ -81,6 +82,7 @@ export function AuthProvider({ children }) {
     }
   }
 
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -104,6 +106,7 @@ export function AuthProvider({ children }) {
     logout,
     loggedin,
     auth,
+    db
   };
 
   return (

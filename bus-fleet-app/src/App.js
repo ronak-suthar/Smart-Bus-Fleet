@@ -7,6 +7,8 @@ import Home from './Components/Home';
 import PageNotFound from './Components/PageNotFound';
 import Passanger from './Components/Passanger';
 import NewPassanger from './Components/NewPassanger';
+import Driver from './Components/Driver';
+import Manager from './Components/Manager';
 import { AuthProvider } from "./Context/AuthContext"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
@@ -21,7 +23,9 @@ function App() {
             <Route path='/signup' element={<SignUp />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/passanger' element={<NewPassanger />} />
+            <Route path='/passanger' element={<Passanger />} />
+            <Route path='/driver' element={<Driver />} />
+            <Route path='/manager' element={<Manager />} />
             <Route default element={<PageNotFound />} />
           </Routes>
         </Router>

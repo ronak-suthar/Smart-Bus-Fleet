@@ -1,8 +1,21 @@
 .signUp{
+  display: flex;
   text-align: center;
   max-width: 400px;
   width: 100%;
   font-size: 20px;
+}
+.managerPage Card{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.driver-page{
+  font-size: 25px;
 }
 .search-bar{
   margin : 2rem;

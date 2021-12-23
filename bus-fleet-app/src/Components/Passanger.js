@@ -113,7 +113,7 @@ const Passanger = () => {
         bottom: [0, -25],
       };
       const popup = new tt.Popup({ offset: popupOffset }).setHTML(
-        "This is you!"
+        "Vehicle Current Location!"
       );
       const element = document.createElement("div");
       element.className = "marker";
@@ -188,7 +188,8 @@ const Passanger = () => {
           .then((routeData) => {
             const geoJson = routeData.toGeoJson();
             drawRoute(geoJson, map);
-          }).catch(console.log("Error"))
+          })
+          .catch(console.log("Error"));
       });
     };
 
@@ -222,6 +223,20 @@ const Passanger = () => {
           <div ref={mapElement} className="map" />
         </div>
       )}
+      {
+        <div>
+          <h4>Location 1,Distance : 0.351 kms, Travel Time : 0.95 minutes</h4>
+          <h4>Location 2,Distance : 1 kms, Travel Time : 2.25 minutes</h4>
+          <h4>
+            Location 3,Distance : 1.54 kms, Travel Time : 3.183333333333333
+            minutes
+          </h4>
+          <h4>
+            Location 4,Distance : 2.118 kms, Travel Time : 3.8833333333333333
+            minutes
+          </h4>
+        </div>
+      }
     </>
   );
 };

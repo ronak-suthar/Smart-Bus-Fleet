@@ -23,10 +23,7 @@ def convert_to_degrees(raw_value):
 
 
 config = {
-  "apiKey": "9IZ2KSvRRIK8GN1mJGrPMZwYeHt7PoKLS5V5cwVX",
-  "authDomain": "basicstesing.firebaseapp.com",
-  "databaseURL": "https://basicstesing-default-rtdb.asia-southeast1.firebasedatabase.app/",
-  "storageBucket": "basicstesing.appspot.com"
+  #
 }
 
 firebase = pyrebase.initialize_app(config)

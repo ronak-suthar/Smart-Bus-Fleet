@@ -12,14 +12,7 @@ import { getDatabase } from "firebase/database";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAUkUK-m0CjxXh4laVmaHKr-tUJSmYFSHI",
-  authDomain: "smart-bus-fleet.firebaseapp.com",
-  projectId: "smart-bus-fleet",
-  storageBucket: "smart-bus-fleet.appspot.com",
-  messagingSenderId: "292217918631",
-  appId: "1:292217918631:web:a36d9f9377fc48e6d8f782",
-  measurementId: "G-CW65GNRCGK",
-  databaseURL:"https://smart-bus-fleet-default-rtdb.asia-southeast1.firebasedatabase.app/"
+  //
 };
 
 // Initialize Firebase
